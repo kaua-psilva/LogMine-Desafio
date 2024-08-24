@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="shortcut icon" href="assets/logo-solo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>LogMine</title>
+  </head>
+  <body>
+    <main>
+      <header data-aos ="fade-down" data-aos-duration = "1000">
+        <div id="logo-head">
+            <img src="assets/logo.svg" alt="logo" />
+        </div>
+        <nav>
+          <a href="#">ENTRAR</a>
+          <a href="#">FORUM</a>
+          <a href="#">SOBRE</a>
+          <a href="#">MOJANG</a>
+          <a href="#">PERGUNTAS</a>
+        </nav>
+            
+      </header>
+      <div id="login-form" data-aos ="fade-right" data-aos-duration = "1500">
+        <div id="logo-form">
+          <img src="assets/logo-solo.svg" alt="">
+        </div>
+        <label for="email">
+          <p>Insira seu e-mail:</p>
+          <input type="email" id="input-email"= placeholder="Insira seu email">
+          <p id="input-error-email"></p>
+        </label>
+        <label for="password">
+          <p>Insira sua senha:</p>
+          <input type="password" class="input" placeholder="Insira sua senha">
+          <p id="input-error-password"></p>
+        </label>
+        <label for="forget-password" id="password-frgt">
+          <input type="checkbox">
+          <span>Lembrar minha senha</span>
+        </label>
+        <button id="login-btn" onclick="verificar()">
+          Entrar na minha conta
+        </button>
+      </div>
+      <footer id="footer">
+        <div class="footer-item">
+          <img src="assets/power.svg" alt="power-icon">
+          <p>Jogue também offline</p>
+        </div>
+        <div class="footer-item">
+          <img src="assets/user.svg" alt="user-icon">
+          <p>67 jogadores</p>
+        </div>
+        <div class="footer-item">
+          <img src="assets/controller.svg" alt="controller-icon">
+          <p>Compativel com uso remoto</p>
+        </div>
+        <div class="footer-item">
+          <img src="assets/vibrate.svg" alt="vibrate-icon">
+          <p>Vibração no controle</p>
+        </div>
+        <div class="footer-item">
+          <img src="assets/baby.svg" alt="baby-icon">
+          <p>Permitido para menores</p>
+        </div>
+      </footer>
+    </main>
+    <script src="src/script.js" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
