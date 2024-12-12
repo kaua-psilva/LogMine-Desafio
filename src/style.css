@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Iceland&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kufam:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -25,7 +24,8 @@ main {
   flex-direction: column;
   gap: 25px;
 }
-main header {
+
+header {
   margin-top: 0px;
   display: flex;
   flex-direction: column;
@@ -33,15 +33,13 @@ main header {
   align-items: center;
   gap: 20px;
 }
-main header img {
+
+header img {
   width: 120px;
   height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
-main header nav a {
+
+header nav a {
   text-decoration: none;
   text-align: center;
   color: white;
@@ -53,11 +51,13 @@ main header nav a {
   border-radius: 6px;
   transition: 0.4s ease-in;
 }
-main header nav a:hover {
+
+header nav a:hover {
   background-color: white;
   color: #269E6D;
 }
-main #login-form {
+
+#login-form {
   width: 455px;
   height: 450px;
   background-color: hsla(0, 0%, 15%, 0.802);
@@ -70,51 +70,45 @@ main #login-form {
   color: white;
   border: 1px #737373 solid;
 }
-main #login-form #logo-form {
+
+#logo-form {
   margin-top: 32px;
   width: 34px;
   height: 52px;
 }
-main #login-form #password-frgt {
+
+#password-frgt {
   display: flex;
   align-items: center;
   margin-left: -180px;
   gap: 10px;
 }
-main #login-form #input-email {
+
+#input-email {
   color: white;
   font-size: 12px;
   box-sizing: border-box;
 }
-main #login-form label {
+
+label {
   line-height: 48px;
   text-align: left;
 }
-main #login-form label input[type=email]::-moz-placeholder {
-  color: white;
-  font-family: "Inter";
+
+label input[type=email]::-moz-placeholder, label input[type=password]::-moz-placeholder {
   color: #BAACAC;
+  font-family: "Inter";
   font-size: 14px;
 }
-main #login-form label input[type=email]::placeholder {
-  color: white;
-  font-family: "Inter";
+
+label input[type=email]::placeholder,
+label input[type=password]::placeholder {
   color: #BAACAC;
+  font-family: "Inter";
   font-size: 14px;
 }
-main #login-form label input[type=password]::-moz-placeholder {
-  color: white;
-  font-family: "Inter";
-  color: #BAACAC;
-  font-size: 14px;
-}
-main #login-form label input[type=password]::placeholder {
-  color: white;
-  font-family: "Inter";
-  color: #BAACAC;
-  font-size: 14px;
-}
-main #login-form label input {
+
+label input {
   width: 376px;
   height: 48px;
   background-color: #262626;
@@ -126,19 +120,14 @@ main #login-form label input {
   font-family: inter;
   color: #BAACAC;
   font-size: 14px;
-  font-weight: 14px;
 }
-main #login-form label input::-moz-selection {
-  outline: none;
-}
-main #login-form label input::selection, main #login-form label input:focus {
-  outline: none;
-}
-main #login-form label input[type=checkbox] {
+
+label input[type=checkbox] {
   width: 16px;
   height: 15px;
 }
-main #login-form #login-btn {
+
+#login-btn {
   width: 376px;
   height: 48px;
   background-color: #269E6D;
@@ -152,7 +141,8 @@ main #login-form #login-btn {
   box-shadow: 0px 2px 0px #fff, inset 0px 2px 0px rgba(255, 255, 255, 0.4862745098);
   box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.0588235294);
 }
-main footer {
+
+footer {
   display: flex;
   color: white;
   align-items: center;
@@ -160,4 +150,41 @@ main footer {
   text-align: center;
   gap: 50px;
   line-height: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    width: 80%;
+    gap: 15px;
+  }
+  header img {
+    width: 100px;
+    height: 50px;
+  }
+  header nav a {
+    font-size: 14px;
+    padding: 8px;
+    margin: 10px;
+  }
+  #login-form {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+  label input {
+    width: 100%;
+  }
+  #login-btn {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  header nav a {
+    font-size: 12px;
+    margin: 5px;
+  }
+  #login-form {
+    padding: 15px;
+  }
 }/*# sourceMappingURL=style.css.map */
